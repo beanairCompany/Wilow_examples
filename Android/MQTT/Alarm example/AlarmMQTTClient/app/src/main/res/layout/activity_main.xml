@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/t_deviceId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:ems="10"
+        android:hint="BeanDevice Mac ID"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/t_brokerPort"
+        app:layout_constraintTop_toBottomOf="@+id/t_clientId" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Device Id"
+        app:layout_constraintBottom_toBottomOf="@+id/t_deviceId"
+        app:layout_constraintStart_toStartOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Client ID"
+        app:layout_constraintBottom_toBottomOf="@+id/t_clientId"
+        app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Broker"
+        app:layout_constraintBottom_toBottomOf="@+id/t_brokerIp"
+        app:layout_constraintStart_toStartOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Port"
+        app:layout_constraintBottom_toBottomOf="@+id/t_brokerPort"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/t_clientId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:ems="10"
+        android:hint="Client ID"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/t_brokerIp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/t_brokerIp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Broker IP or DNS"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/t_brokerPort"
+        app:layout_constraintTop_toBottomOf="@+id/t_clientId" />
+
+    <Button
+        android:id="@+id/b_connect"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Connect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/t_brokerPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="1883"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t_brokerIp" />
+
+    <TextView
+        android:id="@+id/tv_connectionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/b_connect"
+        app:layout_constraintEnd_toEndOf="@+id/b_connect"
+        app:layout_constraintStart_toStartOf="@+id/b_connect"
+        app:layout_constraintTop_toBottomOf="@+id/t_deviceId" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
